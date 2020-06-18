@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+}
+.error{
+  color:red;
+}
+.navbar {
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  z-index: 2000;
+  font-size: 14px
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+.nav-item {
+  margin-right: 1.5em;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #083E9E;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+#create-account {
+  border: 1px solid #144499;
+  border-radius: 5px;
+  padding: 15px 30px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-button div {
+  height: 3px;
+  width: 23px;
+  margin-top: 0.3em;
+  background-color: #144499;
+  transition: all 0.5s ease;
+}
+
+.nav-button .first {
+  top: 23px;
+}
+
+.nav-button .second {
+  top: 33px;
+}
+
+.nav-button .third {
+  top: 43px;
+}
+
+/*form*/
+
+.calculator {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+  width: 100%;
+}
+
+.note {
+  text-align: center;
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+.note>h1 {
+  color: #083E9E;
+}
+
+.input-group {
+  margin-bottom: 0.65em;
+}
+
+input, select {
+  display: flex;
+  width: 100%;
+  padding: 1.25em;
+  background-color: #E7F2F7;
+  border: none;
+  border-radius: 4px;
+  margin-top: 0.5em;
+}
+
+input:focus, select:focus {
+  outline: #144499 solid 2px;
+}
+
+button {
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 25px;
+  border: none;
+  background-color: #083E9E;
+  color: white;
+  border-radius: 6px 6px 6px 0;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+label {
+  font-weight: bold;
+  color: #083E9E;
+}
+
+::placeholder {
+  font-size: 1.2em;
+}
+
+.card {
+  background-color: #083E9E;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 2em;
+  padding: 1em 3em;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.packages {
+  margin: 2em 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.package {
+  padding: 2em;
+  line-height: 3em;
+  margin-bottom: 2em;
+}
+
+.package-name {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.package-info {
+  font-size: .875rem;
+  color: #4a5568;
+}
+
+.package-interest {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-piggy {
+  width: 50%;
+}
+
+footer a {
+  color: #4a5568;
+  text-decoration: none;
+}
+
+footer ul {
+  list-style-type: none;
+  line-height: 2em;
+}
+
+@media(max-width:560px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .note {
+    font-size: 1em;
+  }
+  .packages {
+    margin: 2em 0;
+    display: block;
+  }
+  .footer {
+    display: inline-block;
+  }
+  .about-piggy {
+    width: 100%;
+  }
+  .footer-first-navbar, .footer-second-navbar {
+    margin-top:2em;
+    width: 50%;
+    float: left;
+  }
+  ul {
+    padding: 0
+  }
+}
