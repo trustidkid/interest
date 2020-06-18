@@ -1,3 +1,6 @@
+<?php session_start(); 
+    require_once('functions/alert.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,10 +94,14 @@
     </div>
     <div class='interest-calculator'>
       <div class='form'>
-        <form method='POST' action='php'>
+        
+        <form method='POST' action='api/v1/calcuteroi.php'>
+        <div style='padding: 0px; height: 20px'> 
+            <?php print_alert();?>
+        </div><br>
           <div class='input-group'>
             <label for='capital'>Capital</label>
-            <input type='number' name='capital' id='capital' placeholder="&#8358;1200.00" required min=100>
+            <input type='number' name='capital' value="<? if(isset($_SESSION['capital']))  echo $_SESSION['capital']; else ''; ?>" id='capital' placeholder="&#8358;1200.00" required min=100>
             <p class='error' id='capital-error'></p>
           </div>
           <div class='input-group'>
@@ -111,10 +118,11 @@
           </div>
           <div class='input-group'>
             <label for='month'>Month</label>
-            <input type='number' id='month' placeholder="Month" min="1" max="12">
+            <input type='number' id='month' value="<? if(isset($_SESSION['month'])) echo $_SESSION['month']; else ''; ?>" placeholder="Month" min="1" max="12">
             <p class='error' id='month-error'></p>
           </div>
-          <button type='button' id='calculate-btn'>Calcuate</button>
+          <!--<button type='button' id='calculate-btn'>Calcuate</button>-->
+          <button type='submit' name="calculate" id='calculate-btn'>Calcuate</button>
         </form>
       </div>
       <div class='interest-output'>
